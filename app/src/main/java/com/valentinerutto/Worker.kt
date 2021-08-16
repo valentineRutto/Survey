@@ -1,4 +1,4 @@
 package com.valentinerutto
 
-class Worker {
+class Worker  {
 }

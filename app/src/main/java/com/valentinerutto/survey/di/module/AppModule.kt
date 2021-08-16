@@ -14,7 +14,6 @@ val appModule = module {
     single { provideOkHttpClient() }
     single { provideRetrofit(get(), BASE_URL) }
     single { provideApiService(get()) }
-
 }
 
 private fun provideOkHttpClient() = if (BuildConfig.DEBUG) {
@@ -39,3 +38,6 @@ private fun provideRetrofit(
 
 private fun provideApiService(retrofit: Retrofit): ApiService =
     retrofit.create(ApiService::class.java)
+val koinModules =
+    listOf(appModule, repoModule, viewModelModule, surveyDaoModule, surveyDatabaseModule)
+

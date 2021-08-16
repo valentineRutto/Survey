@@ -6,6 +6,6 @@ import org.koin.dsl.module
 
 val repoModule = module {
     single {
-        SurveyRepository(get())
+        SurveyRepository(get(),get())
     }
 }
